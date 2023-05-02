@@ -7,5 +7,5 @@ def alunoView(request):
     
     return render(request,'main/alunos.html',{'alunos_list': alunos_list})
 
-
+# teste 
 # Create your views here.

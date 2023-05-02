@@ -4,13 +4,38 @@
 
   <div class="container">
     <h1>Lista de Alunos</h1>
-    <table class="table table-striped">
-        <thead>
+    <table class="table table-bordered table-Red">
+
+        
+
+
+  <thead>
             <tr>
-                <th scope="col">Aluno</th>
-                <th scope="col">Email</th>
-                <th scope="col">Telefone</th>
+                
+
+              <th scope="col">Nome</th>
+              <th scope="col">Email</th>
+              <th scope="col">Telefone</th>
+              <th scope="col">Data Nascimento</th>
+              <th scope="col">Descrição</th>
+              
+              
+              
             </tr>
+          </thead>
+        
+
+        <thead>
+            
+          <tr>
+            
+            <td>{{ aluno.nome }}</td>
+            <td>{{ aluno.email }}</td>
+            <td>{{ aluno.telefone }}</td>
+            <td>{{ aluno.data_nascimento }}</td>
+            <td>{{ aluno.description }}</td>
+     
+          </tr>
         </thead>
         <tbody>
             {% for aluno in alunos_list %}
@@ -18,6 +43,9 @@
                 <td>{{ aluno.nome }}</td>
                 <td>{{ aluno.email }}</td>
                 <td>{{ aluno.telefone }}</td>
+                <td>{{ aluno.data_nascimento }}</td>
+                <td>{{ aluno.description }}</td>
+
               </tr>
             {% empty %}
               <tr>
@@ -25,6 +53,8 @@
               </tr>
             {% endfor %}
         </tbody>
-    </table>
+      </table>
+  
   </div>
 {% endblock %}
+
